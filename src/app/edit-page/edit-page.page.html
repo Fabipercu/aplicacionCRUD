@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Editar Publicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Título</ion-label>
+    <ion-input type = "text" [(ngModel)] = "post.title" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Detalles</ion-label>
+    <ion-textarea [(ngModel)] = "post.details" required></ion-textarea>
+  </ion-item>
+
+  <ion-button class = "ion-padding" color= "primary" expand="full" (click)="updatePost(post)">Editar</ion-button>
+  
+</ion-content>
